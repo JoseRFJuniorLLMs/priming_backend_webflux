@@ -11,5 +11,11 @@ public class CursoCollection {
     @Id
     private String id;
 
+    private String nome;
+
+    private String nivel;
+
+    private String tema;
+
 }
 
