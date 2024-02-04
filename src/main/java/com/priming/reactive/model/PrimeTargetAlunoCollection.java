@@ -7,7 +7,6 @@ import java.util.Objects;
 
 @Document(collection = "primeTargetAlunoCollection")
 public class PrimeTargetAlunoCollection {
-
     @Id
     private String id;
 

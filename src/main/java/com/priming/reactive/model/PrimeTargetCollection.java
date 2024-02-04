@@ -14,13 +14,10 @@ public class PrimeTargetCollection {
 
     private String target;
 
-    private String text;
-
-    public PrimeTargetCollection(String id, String prime, String target, String text) {
+    public PrimeTargetCollection(String id, String prime, String target) {
         this.id = id;
         this.prime = prime;
         this.target = target;
-        this.text = text;
     }
 
     public String getId() {
@@ -47,24 +44,16 @@ public class PrimeTargetCollection {
         this.target = target;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PrimeTargetCollection that = (PrimeTargetCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(text, that.text);
+        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prime, target, text);
+        return Objects.hash(id, prime, target);
     }
 }
