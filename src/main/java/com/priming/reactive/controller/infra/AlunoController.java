@@ -46,21 +46,4 @@ public class AlunoController {
                 .map(tuple -> new AlunoTargetInfo(tuple.getT1(), tuple.getT2()));
     }
 
-    public static class AlunoTargetInfo {
-        private final PrimeTargetFraseCollection fraseInfo;
-        private final PrimeTargetTextCollection textInfo;
-
-        public AlunoTargetInfo(PrimeTargetFraseCollection fraseInfo, PrimeTargetTextCollection textInfo) {
-            this.fraseInfo = fraseInfo;
-            this.textInfo = textInfo;
-        }
-
-        public PrimeTargetFraseCollection getFraseInfo() {
-            return fraseInfo;
-        }
-
-        public PrimeTargetTextCollection getTextInfo() {
-            return textInfo;
-        }
-    }
 }
