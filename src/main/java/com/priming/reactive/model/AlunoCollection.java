@@ -17,9 +17,9 @@ public class AlunoCollection {
 
     private String curso;
 
-    private List prime;
+    private List<String> prime;
 
-    public AlunoCollection(String id, String nome, String cpf, String curso, List prime) {
+    public AlunoCollection(String id, String nome, String cpf, String curso, List<String> prime) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -59,11 +59,11 @@ public class AlunoCollection {
         this.curso = curso;
     }
 
-    public List getPrime() {
+    public List<String> getPrime() {
         return prime;
     }
 
-    public void setPrime(List prime) {
+    public void setPrime(List<String> prime) {
         this.prime = prime;
     }
 
