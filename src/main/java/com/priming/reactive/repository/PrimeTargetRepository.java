@@ -11,4 +11,7 @@ public interface PrimeTargetRepository extends ReactiveMongoRepository<PrimeTarg
     Flux<PrimeTargetCollection> findByPrime(boolean prime);
 
     Flux<PrimeTargetCollection> findByPrimeContaining(String prime);
+
+    // Novo método para buscar por palavra-alvo
+    Flux<PrimeTargetCollection> findByTargetContaining(String target);
 }

@@ -6,22 +6,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
 public class PrimeTargetController {
 
     @Autowired
-    PrimeTargetService primeTargetService;
-
+    private PrimeTargetService primeTargetService;
 
     @GetMapping("/prime")
     @ResponseStatus(HttpStatus.OK)
-    public Flux<PrimeTargetCollection> getAllTprime(@RequestParam(required = false) String prime) {
-        if (prime == null)
+    public Flux<PrimeTargetCollection> getAllPrimeTargets(@RequestParam(required = false) String prime) {
+        if (prime == null) {
             return primeTargetService.findAll();
-        else
-            return primeTargetService.findByPrime(prime);
+        } else {
+            return primeTargetService.findByPrimeContaining(prime);
+        }
+    }
+
+    @GetMapping("/prime/target")
+    @ResponseStatus(HttpStatus.OK)
+    public Mono<String> getPrimeTargetsByTarget(@RequestParam String prime) {
+        return primeTargetService.findSingleTargetByPrime(prime);
     }
 }
