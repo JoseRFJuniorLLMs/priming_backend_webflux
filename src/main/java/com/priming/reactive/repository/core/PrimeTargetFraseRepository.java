@@ -10,6 +10,6 @@ import reactor.core.publisher.Mono;
 public interface PrimeTargetFraseRepository extends ReactiveMongoRepository<PrimeTargetFraseCollection, String> {
     Mono<PrimeTargetFraseCollection> findByPrime(String prime);
 
-    @Query(value = "{ 'prime' : ?0 }", fields = "{ 'prime' : 1, 'target' : 1, 'text' : 1}")
+    @Query(value = "{ 'prime' : ?0 }", fields = "{ 'prime' : 1, 'target' : 1, 'url' : 1, 'frase' : 1}")
     Flux<PrimeTargetFraseCollection> findTargetAndTextByPrime(String prime);
 }
