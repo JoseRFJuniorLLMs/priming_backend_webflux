@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
@@ -37,13 +36,12 @@ public class AlunoController {
         }
     }
 
-    @GetMapping("/aluno/target-info")
-    public Mono<AlunoTargetInfo> getAlunoTargetInfo(@RequestParam String target) {
+    @GetMapping("/aluno/target-info/{target}")
+    public Mono<AlunoTargetInfo> getAlunoTargetInfo(@PathVariable String target) {
         Mono<PrimeTargetFraseCollection> fraseInfo = primeTargetFraseService.findTargetAndTextByPrime(target);
         Mono<PrimeTargetTextCollection> textInfo = primeTargetTextService.findTargetAndTextByPrime(target);
 
         return Mono.zip(fraseInfo, textInfo)
                 .map(tuple -> new AlunoTargetInfo(tuple.getT1(), tuple.getT2()));
     }
-
 }
