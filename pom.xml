@@ -16,11 +16,7 @@
 	<name>spring-boot-mongodb-reactive</name>
 	<description>Rest API</description>
 
-	<configuration>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        </configuration>
-
-	<properties>
+     <properties>
 		<java.version>17</java.version>
 	</properties>
 
