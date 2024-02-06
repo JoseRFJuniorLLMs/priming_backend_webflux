@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 public interface PrimeTargetYoutubeRepository extends ReactiveMongoRepository<PrimeTargetYoutubeCollection, String> {
 
     Mono<PrimeTargetYoutubeCollection> findByPrime(String prime);
-    @Query(value = "{ 'prime' : ?0 }", fields = "{ 'prime' : 1, 'target' : 1, 'url' : 1")
+    @Query(value = "{ 'prime' : ?0 }", fields = "{ 'prime' : 1, 'target' : 1, 'url' : 1}")
     Flux<PrimeTargetYoutubeCollection> findTargetAndUrlByPrime(String prime);
 
 }

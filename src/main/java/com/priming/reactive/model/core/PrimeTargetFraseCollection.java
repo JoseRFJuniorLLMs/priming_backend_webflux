@@ -20,12 +20,15 @@ public class PrimeTargetFraseCollection {
 
     private List<String> url;
 
-    public PrimeTargetFraseCollection(String id, String prime, String target, List<String> frase, List<String> url) {
+    private List<String> imagem;
+
+    public PrimeTargetFraseCollection(String id, String prime, String target, List<String> frase, List<String> url, List<String> imagem) {
         this.id = id;
         this.prime = prime;
         this.target = target;
         this.frase = frase;
         this.url = url;
+        this.imagem = imagem;
     }
 
     public String getId() {
@@ -68,16 +71,24 @@ public class PrimeTargetFraseCollection {
         this.url = url;
     }
 
+    public List<String> getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(List<String> imagem) {
+        this.imagem = imagem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PrimeTargetFraseCollection that = (PrimeTargetFraseCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(frase, that.frase) && Objects.equals(url, that.url);
+        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(frase, that.frase) && Objects.equals(url, that.url) && Objects.equals(imagem, that.imagem);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prime, target, frase, url);
+        return Objects.hash(id, prime, target, frase, url, imagem);
     }
 }
