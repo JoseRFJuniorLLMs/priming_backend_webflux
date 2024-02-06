@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
-@RequestMapping("/api/prime-target-youtube")
+@RequestMapping("/api/youtube")
 public class PrimeTargetYoutubeController {
 
     private static final Logger logger = LoggerFactory.getLogger(PrimeTargetYoutubeController.class);
