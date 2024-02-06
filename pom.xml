@@ -14,7 +14,11 @@
 	<artifactId>spring-boot-mongodb-reactive</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-mongodb-reactive</name>
-	<description>Spring Boot and MongoDB Reactive example: CRUD Rest API</description>
+	<description>Rest API</description>
+
+	<configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
 
 	<properties>
 		<java.version>17</java.version>
