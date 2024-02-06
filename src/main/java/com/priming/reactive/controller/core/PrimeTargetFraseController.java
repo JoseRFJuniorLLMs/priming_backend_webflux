@@ -25,7 +25,7 @@ public class PrimeTargetFraseController {
     public Mono<ResponseEntity<PrimeTargetFraseCollection>> findTargetAndTextByPrime(@PathVariable String prime) {
         logger.info("Request received to find target and text for prime: {}", prime);
 
-        return primeTargetFraseService.findTargetAndTextByPrime(prime)
+        return primeTargetFraseService.findTargetAndFraseByPrime(prime)
                 .map(result -> {
                     if (result != null) {
                         logger.info("Returning target and text for prime: {}", prime);

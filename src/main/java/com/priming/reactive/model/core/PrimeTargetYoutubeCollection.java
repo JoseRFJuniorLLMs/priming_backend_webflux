@@ -3,6 +3,7 @@ package com.priming.reactive.model.core;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
 import java.util.Objects;
 
 @Document(collection = "primeTargetYoutubeCollection")
@@ -15,13 +16,13 @@ public class PrimeTargetYoutubeCollection {
 
     private String target;
 
-    private String text;
+    private List<String> url;
 
-    public PrimeTargetYoutubeCollection(String id, String prime, String target, String text) {
+    public PrimeTargetYoutubeCollection(String id, String prime, String target, List<String> url) {
         this.id = id;
         this.prime = prime;
         this.target = target;
-        this.text = text;
+        this.url = url;
     }
 
     public String getId() {
@@ -48,12 +49,12 @@ public class PrimeTargetYoutubeCollection {
         this.target = target;
     }
 
-    public String getText() {
-        return text;
+    public List<String> getUrl() {
+        return url;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setUrl(List<String> url) {
+        this.url = url;
     }
 
     @Override
@@ -61,11 +62,11 @@ public class PrimeTargetYoutubeCollection {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PrimeTargetYoutubeCollection that = (PrimeTargetYoutubeCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(text, that.text);
+        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(url, that.url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prime, target, text);
+        return Objects.hash(id, prime, target, url);
     }
 }

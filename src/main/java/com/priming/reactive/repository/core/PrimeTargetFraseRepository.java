@@ -11,5 +11,5 @@ public interface PrimeTargetFraseRepository extends ReactiveMongoRepository<Prim
     Mono<PrimeTargetFraseCollection> findByPrime(String prime);
 
     @Query(value = "{ 'prime' : ?0 }", fields = "{ 'prime' : 1, 'target' : 1, 'url' : 1, 'frase' : 1}")
-    Flux<PrimeTargetFraseCollection> findTargetAndTextByPrime(String prime);
+    Flux<PrimeTargetFraseCollection> findTargetAndFraseByPrime(String prime);
 }

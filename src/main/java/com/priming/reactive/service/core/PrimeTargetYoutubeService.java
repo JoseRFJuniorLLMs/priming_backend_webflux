@@ -1,24 +1,24 @@
-// PrimeTargetFraseService.java
+// PrimeTargetYoutubeService.java
 package com.priming.reactive.service.core;
 
-import com.priming.reactive.model.core.PrimeTargetFraseCollection;
-import com.priming.reactive.repository.core.PrimeTargetFraseRepository;
+import com.priming.reactive.model.core.PrimeTargetYoutubeCollection;
+import com.priming.reactive.repository.core.PrimeTargetYoutubeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
-public class PrimeTargetFraseService {
+public class PrimeTargetYoutubeService {
 
     @Autowired
-    private PrimeTargetFraseRepository primeTargetFraseRepository;
+    private PrimeTargetYoutubeRepository primeTargetYoutubeRepository;
 
-    public Mono<PrimeTargetFraseCollection> findTargetAndFraseByPrime(String prime) {
-        return primeTargetFraseRepository.findTargetAndFraseByPrime(prime)
+    public Mono<PrimeTargetYoutubeCollection> findTargetAndUrlByPrime(String prime) {
+        return primeTargetYoutubeRepository.findTargetAndUrlByPrime(prime)
                 .collectList()
                 .flatMap(results -> {
                     if (results.isEmpty()) {
-                        return Mono.error(new RuntimeException("Nenhum resultado encontrado para a palavra-chave: " + prime));
+                        return Mono.error(new RuntimeException("No results found for the keyword: " + prime));
                     } else if (results.size() > 1) {
                         // Handle the case of multiple results as needed
                         // For example, returning the first result in this example
