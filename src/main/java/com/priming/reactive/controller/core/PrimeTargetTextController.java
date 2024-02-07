@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
-@RequestMapping("/api/prime-target-text")
+@RequestMapping("/api/text")
 public class PrimeTargetTextController {
 
     private static final Logger logger = LoggerFactory.getLogger(PrimeTargetTextController.class);
