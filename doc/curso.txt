@@ -1,0 +1,215 @@
+[
+  {
+    "name": "Basic English",
+    "objective": "Introduction to the English language for beginners.",
+    "content": [
+      "Greetings and introductions.",
+      "Numbers, dates, and times.",
+      "Essential vocabulary for everyday situations."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "A1"
+  },
+  {
+    "name": "English for Travel",
+    "objective": "Preparation for common situations while traveling.",
+    "content": [
+      "Hotel and ticket reservations.",
+      "Ordering in restaurants.",
+      "Directions and public transportation."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "B1"
+  },
+  {
+    "name": "Informal English and Slang",
+    "objective": "Development of the ability to communicate informally.",
+    "content": [
+      "Everyday slang and expressions.",
+      "Casual conversation."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "C1"
+  },
+  {
+    "name": "English for Interviews",
+    "objective": "Preparation for job or academic interviews.",
+    "content": [
+      "Frequently asked questions and answers.",
+      "Vocabulary related to skills and experiences."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "B2"
+  },
+  {
+    "name": "Business English",
+    "objective": "Effective communication in business environments.",
+    "content": [
+      "Meetings and presentations.",
+      "Business correspondence."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "A1"
+  },
+  {
+    "name": "Academic English",
+    "objective": "Development of academic reading and writing skills.",
+    "content": [
+      "Essay writing.",
+      "Understanding academic texts."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "B1"
+  },
+  {
+    "name": "English for Social Media",
+    "objective": "Understanding and participating in social media platforms.",
+    "content": [
+      "Use of hashtags and memes.",
+      "Writing posts and comments."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "C1"
+  },
+  {
+    "name": "Technical and Scientific English",
+    "objective": "Communication in specific fields like technology or science.",
+    "content": [
+      "Technical vocabulary.",
+      "Writing technical documents."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "B2"
+  },
+  {
+{
+    "name": "English for Art and Culture",
+    "objective": "Exploration of art, music, cinema, and culture.",
+    "content": [
+      "Discussion of artworks.",
+      "Description of cultural events."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+	        "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "A1"
+  },
+  {
+    "name": "Advanced English",
+    "objective": "Development of advanced language skills.",
+    "content": [
+      "Analysis of literary texts.",
+      "Complex discussions."
+    ],
+    "lessonCollections": [
+      "Basic 1",
+      "Basic 2",
+      "Basic 3",
+      "Basic 4",
+      "Basic 5",
+      "Basic 6",
+      "Basic 7",
+      "Basic 8",
+      "Basic 9",
+      "Basic 10"
+    ],
+    "category": "B1"
+  }
+]

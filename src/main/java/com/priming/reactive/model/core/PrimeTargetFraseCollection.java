@@ -16,17 +16,17 @@ public class PrimeTargetFraseCollection {
 
     private String target;
 
-    private List<String> frase;
+    private List<String> phrases;
 
     private List<String> url;
 
     private List<String> imagem;
 
-    public PrimeTargetFraseCollection(String id, String prime, String target, List<String> frase, List<String> url, List<String> imagem) {
+    public PrimeTargetFraseCollection(String id, String prime, String target, List<String> phrases, List<String> url, List<String> imagem) {
         this.id = id;
         this.prime = prime;
         this.target = target;
-        this.frase = frase;
+        this.phrases = phrases;
         this.url = url;
         this.imagem = imagem;
     }
@@ -56,11 +56,11 @@ public class PrimeTargetFraseCollection {
     }
 
     public List<String> getFrase() {
-        return frase;
+        return phrases;
     }
 
-    public void setFrase(List<String> frase) {
-        this.frase = frase;
+    public void setFrase(List<String> phrases) {
+        this.phrases = phrases;
     }
 
     public List<String> getUrl() {
@@ -84,11 +84,11 @@ public class PrimeTargetFraseCollection {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PrimeTargetFraseCollection that = (PrimeTargetFraseCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(frase, that.frase) && Objects.equals(url, that.url) && Objects.equals(imagem, that.imagem);
+        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(phrases, that.phrases) && Objects.equals(url, that.url) && Objects.equals(imagem, that.imagem);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prime, target, frase, url, imagem);
+        return Objects.hash(id, prime, target, phrases, url, imagem);
     }
 }

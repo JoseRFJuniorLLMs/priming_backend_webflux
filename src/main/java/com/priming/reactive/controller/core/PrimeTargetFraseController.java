@@ -10,7 +10,7 @@ import com.priming.reactive.service.core.PrimeTargetFraseService;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
-@RequestMapping("/api/frase")
+@RequestMapping("/api/phrases")
 public class PrimeTargetFraseController {
 
     private static final Logger logger = LoggerFactory.getLogger(PrimeTargetFraseController.class);
