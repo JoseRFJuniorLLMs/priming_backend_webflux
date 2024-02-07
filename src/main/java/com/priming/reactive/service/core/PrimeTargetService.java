@@ -13,18 +13,19 @@ public class PrimeTargetService {
     @Autowired
     private PrimeTargetRepository primeTargetRepository;
 
-    public Flux<PrimeTargetCollection> findAll() {
-        return primeTargetRepository.findAll();
-    }
-
-    public Flux<PrimeTargetCollection> findByPrimeContaining(String target) {
-        return primeTargetRepository.findByPrimeContaining(target);
-    }
-    public Mono<String> findSingleTargetByPrime(String prime) {
+    public Mono<PrimeTargetCollection> findSingleTargetByPrime(String prime) {
         return primeTargetRepository.findByPrimeContaining(prime)
-                .map(PrimeTargetCollection::getTarget)
-                .next(); // Use next() para obter o primeiro item como Mono
+                .collectList()
+                .flatMap(results -> {
+                    if (results.isEmpty()) {
+                        return Mono.error(new RuntimeException("Nenhum resultado encontrado para a palavra-chave: " + prime));
+                    } else if (results.size() > 1) {
+                        // Handle the case of multiple results as needed
+                        // For example, returning the first result in this example
+                        return Mono.just(results.get(0));
+                    } else {
+                        return Mono.just(results.get(0));
+                    }
+                });
     }
-
-
 }

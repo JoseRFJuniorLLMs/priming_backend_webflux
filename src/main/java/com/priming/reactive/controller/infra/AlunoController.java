@@ -1,11 +1,13 @@
 package com.priming.reactive.controller.infra;
 
+import com.priming.reactive.model.core.PrimeTargetCollection;
 import com.priming.reactive.model.infra.AlunoCollection;
 import com.priming.reactive.model.core.PrimeTargetFraseCollection;
 import com.priming.reactive.model.core.PrimeTargetTextCollection;
 import com.priming.reactive.model.core.PrimeTargetYoutubeCollection;
 
 
+import com.priming.reactive.service.core.PrimeTargetService;
 import com.priming.reactive.service.infra.AlunoService;
 import com.priming.reactive.service.core.PrimeTargetFraseService;
 import com.priming.reactive.service.core.PrimeTargetTextService;
@@ -22,6 +24,8 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/api")
 public class AlunoController {
 
+    @Autowired
+    private PrimeTargetService primeTargetService;
     @Autowired
     private AlunoService alunoService;
 
@@ -44,13 +48,14 @@ public class AlunoController {
         }
     }
 
-    @GetMapping("/aluno/target-info/{target}")
+    @GetMapping("/aluno/info/{target}")
     public Mono<AlunoTargetInfo> getAlunoTargetInfo(@PathVariable String target) {
+        Mono<PrimeTargetCollection> primingInfo = primeTargetService.findSingleTargetByPrime(target);
         Mono<PrimeTargetFraseCollection> fraseInfo = primeTargetFraseService.findTargetAndFraseByPrime(target);
         Mono<PrimeTargetTextCollection> textInfo = primeTargetTextService.findTargetAndTextByPrime(target);
         Mono<PrimeTargetYoutubeCollection> youtubeInfo = primeTargetYoutubeService.findTargetAndUrlByPrime(target);
 
-        return Mono.zip(fraseInfo, textInfo)
-                .map(tuple -> new AlunoTargetInfo(tuple.getT1(), tuple.getT2()));
+        return Mono.zip(fraseInfo, textInfo, primingInfo, youtubeInfo)
+                .map(tuple -> new AlunoTargetInfo(tuple.getT1(), tuple.getT2(), tuple.getT3(), tuple.getT4()));
     }
 }

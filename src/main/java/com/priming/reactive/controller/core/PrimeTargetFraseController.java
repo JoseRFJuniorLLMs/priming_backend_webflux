@@ -1,15 +1,12 @@
-// PrimeTargetFraseController.java
 package com.priming.reactive.controller.core;
 
-import com.priming.reactive.model.core.PrimeTargetFraseCollection;
-import com.priming.reactive.service.core.PrimeTargetFraseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
+import com.priming.reactive.service.core.PrimeTargetFraseService;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
@@ -18,11 +15,14 @@ public class PrimeTargetFraseController {
 
     private static final Logger logger = LoggerFactory.getLogger(PrimeTargetFraseController.class);
 
-    @Autowired
-    private PrimeTargetFraseService primeTargetFraseService;
+    private final PrimeTargetFraseService primeTargetFraseService;
+
+    public PrimeTargetFraseController(PrimeTargetFraseService primeTargetFraseService) {
+        this.primeTargetFraseService = primeTargetFraseService;
+    }
 
     @GetMapping("/{prime}")
-    public Mono<ResponseEntity<PrimeTargetFraseCollection>> findTargetAndTextByPrime(@PathVariable String prime) {
+    public Mono<ResponseEntity<?>> findTargetAndTextByPrime(@PathVariable String prime) {
         logger.info("Request received to find target and text for prime: {}", prime);
 
         return primeTargetFraseService.findTargetAndFraseByPrime(prime)
