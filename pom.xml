@@ -19,7 +19,14 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-
+<profiles>
+    <profile>
+        <id>skip-tests</id>
+        <properties>
+            <maven.test.skip>true</maven.test.skip>
+        </properties>
+    </profile>
+</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
