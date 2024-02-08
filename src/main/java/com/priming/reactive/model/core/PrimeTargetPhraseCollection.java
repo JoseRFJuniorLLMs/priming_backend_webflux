@@ -7,8 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 import java.util.Objects;
 
-@Document(collection = "primeTargetFraseCollection")
-public class PrimeTargetFraseCollection {
+@Document(collection = "primeTargetPhraseCollection")
+public class PrimeTargetPhraseCollection {
     @Id
     private String id;
 
@@ -16,20 +16,11 @@ public class PrimeTargetFraseCollection {
 
     private String target;
 
-    private List<String> phrases;
+    private List<String> phrase;
 
     private List<String> url;
 
     private List<String> imagem;
-
-    public PrimeTargetFraseCollection(String id, String prime, String target, List<String> phrases, List<String> url, List<String> imagem) {
-        this.id = id;
-        this.prime = prime;
-        this.target = target;
-        this.phrases = phrases;
-        this.url = url;
-        this.imagem = imagem;
-    }
 
     public String getId() {
         return id;
@@ -55,12 +46,12 @@ public class PrimeTargetFraseCollection {
         this.target = target;
     }
 
-    public List<String> getFrase() {
-        return phrases;
+    public List<String> getPhrase() {
+        return phrase;
     }
 
-    public void setFrase(List<String> phrases) {
-        this.phrases = phrases;
+    public void setPhrase(List<String> phrase) {
+        this.phrase = phrase;
     }
 
     public List<String> getUrl() {
@@ -83,12 +74,22 @@ public class PrimeTargetFraseCollection {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PrimeTargetFraseCollection that = (PrimeTargetFraseCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(phrases, that.phrases) && Objects.equals(url, that.url) && Objects.equals(imagem, that.imagem);
+        PrimeTargetPhraseCollection that = (PrimeTargetPhraseCollection) o;
+        return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(phrase, that.phrase) && Objects.equals(url, that.url) && Objects.equals(imagem, that.imagem);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, prime, target, phrases, url, imagem);
+        return Objects.hash(id, prime, target, phrase, url, imagem);
+    }
+
+    public PrimeTargetPhraseCollection(String id, String prime, String target, List<String> phrase, List<String> url, List<String> imagem) {
+        this.id = id;
+        this.prime = prime;
+        this.target = target;
+        this.phrase = phrase;
+        this.url = url;
+        this.imagem = imagem;
+
     }
 }

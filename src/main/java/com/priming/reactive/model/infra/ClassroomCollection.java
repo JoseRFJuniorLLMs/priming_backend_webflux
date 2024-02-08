@@ -16,30 +16,16 @@ public class ClassroomCollection {
     private String modulo;
     private List<String> prime;
     private List<String> target;
-    private List<String> frase;
+    private List<String> phrases;
 
-    @Field("audioUrls")
-    private List<String> audioUrls;
-
-    @Field("ImageUrls")
-    private List<String> ImageUrls;
-
-    @Field("videoUrls")
-    private List<String> videoUrls;
-    private String text;
-
-    public ClassroomCollection(String id, String alunoId, String curso, String modulo, List<String> prime, List<String> target, List<String> frase, List<String> audioUrls, List<String> ImageUrls, List<String> videoUrls, String text) {
+    public ClassroomCollection(String id, String alunoId, String curso, String modulo, List<String> prime, List<String> target, List<String> phrases) {
         this.id = id;
         this.alunoId = alunoId;
         this.curso = curso;
         this.modulo = modulo;
         this.prime = prime;
         this.target = target;
-        this.frase = frase;
-        this.audioUrls = audioUrls;
-        this.ImageUrls = ImageUrls;
-        this.videoUrls = videoUrls;
-        this.text = text;
+        this.phrases = phrases;
     }
 
     public String getId() {
@@ -90,44 +76,12 @@ public class ClassroomCollection {
         this.target = target;
     }
 
-    public List<String> getFrase() {
-        return frase;
+    public List<String> getPhrases() {
+        return phrases;
     }
 
-    public void setFrase(List<String> frase) {
-        this.frase = frase;
-    }
-
-    public List<String> getUrlAudio() {
-        return audioUrls;
-    }
-
-    public void setUrlAudio(List<String> audioUrls) {
-        this.audioUrls = audioUrls;
-    }
-
-    public List<String> getUrlImagem() {
-        return ImageUrls;
-    }
-
-    public void setUrlImagem(List<String> ImageUrls) {
-        this.ImageUrls = ImageUrls;
-    }
-
-    public List<String> getUrlVideo() {
-        return videoUrls;
-    }
-
-    public void setUrlVideo(List<String> videoUrls) {
-        this.videoUrls = videoUrls;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public void setPhrases(List<String> phrases) {
+        this.phrases = phrases;
     }
 
     @Override
@@ -135,11 +89,11 @@ public class ClassroomCollection {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ClassroomCollection that = (ClassroomCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(alunoId, that.alunoId) && Objects.equals(curso, that.curso) && Objects.equals(modulo, that.modulo) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(frase, that.frase) && Objects.equals(audioUrls, that.audioUrls) && Objects.equals(ImageUrls, that.ImageUrls) && Objects.equals(videoUrls, that.videoUrls) && Objects.equals(text, that.text);
+        return Objects.equals(id, that.id) && Objects.equals(alunoId, that.alunoId) && Objects.equals(curso, that.curso) && Objects.equals(modulo, that.modulo) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(phrases, that.phrases);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, alunoId, curso, modulo, prime, target, frase, audioUrls, ImageUrls, videoUrls, text);
+        return Objects.hash(id, alunoId, curso, modulo, prime, target, phrases);
     }
 }

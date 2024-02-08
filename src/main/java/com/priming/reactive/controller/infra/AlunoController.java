@@ -2,14 +2,14 @@ package com.priming.reactive.controller.infra;
 
 import com.priming.reactive.model.core.PrimeTargetCollection;
 import com.priming.reactive.model.infra.AlunoCollection;
-import com.priming.reactive.model.core.PrimeTargetFraseCollection;
+import com.priming.reactive.model.core.PrimeTargetPhraseCollection;
 import com.priming.reactive.model.core.PrimeTargetTextCollection;
 import com.priming.reactive.model.core.PrimeTargetYoutubeCollection;
 
 
 import com.priming.reactive.service.core.PrimeTargetService;
 import com.priming.reactive.service.infra.AlunoService;
-import com.priming.reactive.service.core.PrimeTargetFraseService;
+import com.priming.reactive.service.core.PrimeTargetPhraseService;
 import com.priming.reactive.service.core.PrimeTargetTextService;
 import com.priming.reactive.service.core.PrimeTargetYoutubeService;
 
@@ -30,7 +30,7 @@ public class AlunoController {
     private AlunoService alunoService;
 
     @Autowired
-    private PrimeTargetFraseService primeTargetFraseService;
+    private PrimeTargetPhraseService primeTargetPhraseService;
 
     @Autowired
     private PrimeTargetTextService primeTargetTextService;
@@ -51,7 +51,7 @@ public class AlunoController {
     @GetMapping("/aluno/info/{target}")
     public Mono<AlunoTargetInfo> getAlunoTargetInfo(@PathVariable String target) {
         Mono<PrimeTargetCollection> primingInfo = primeTargetService.findSingleTargetByPrime(target);
-        Mono<PrimeTargetFraseCollection> fraseInfo = primeTargetFraseService.findTargetAndFraseByPrime(target);
+        Mono<PrimeTargetPhraseCollection> fraseInfo = primeTargetPhraseService.findTargetAndPhraseByPrime(target);
         Mono<PrimeTargetTextCollection> textInfo = primeTargetTextService.findTargetAndTextByPrime(target);
         Mono<PrimeTargetYoutubeCollection> youtubeInfo = primeTargetYoutubeService.findTargetAndUrlByPrime(target);
 

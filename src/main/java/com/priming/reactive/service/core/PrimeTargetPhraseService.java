@@ -1,20 +1,20 @@
 // PrimeTargetFraseService.java
 package com.priming.reactive.service.core;
 
-import com.priming.reactive.model.core.PrimeTargetFraseCollection;
-import com.priming.reactive.repository.core.PrimeTargetFraseRepository;
+import com.priming.reactive.model.core.PrimeTargetPhraseCollection;
+import com.priming.reactive.repository.core.PrimeTargetPhraseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
-public class PrimeTargetFraseService {
+public class PrimeTargetPhraseService {
 
     @Autowired
-    private PrimeTargetFraseRepository primeTargetFraseRepository;
+    private PrimeTargetPhraseRepository primeTargetPhraseRepository;
 
-    public Mono<PrimeTargetFraseCollection> findTargetAndFraseByPrime(String prime) {
-        return primeTargetFraseRepository.findTargetAndFraseByPrime(prime)
+    public Mono<PrimeTargetPhraseCollection> findTargetAndPhraseByPrime(String prime) {
+        return primeTargetPhraseRepository.findTargetAndPhraseByPrime(prime)
                 .collectList()
                 .flatMap(results -> {
                     if (results.isEmpty()) {

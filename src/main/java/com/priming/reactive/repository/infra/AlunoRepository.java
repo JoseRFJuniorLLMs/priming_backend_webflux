@@ -10,6 +10,5 @@ public interface AlunoRepository extends ReactiveMongoRepository<AlunoCollection
 
     Flux<AlunoCollection> findByCurso(String curso);
 
-    // Se necessário, adicione métodos adicionais conforme a lógica do seu repositório
 
 }
