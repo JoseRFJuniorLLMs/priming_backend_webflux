@@ -15,17 +15,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+		<version>3.2.2</version>
 		<relativePath/> </parent>
 
 	<groupId>com.priming</groupId>
 	<artifactId>spring-boot-mongodb-reactive</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-mongodb-reactive</name>
-	<description>Spring Boot and MongoDB Reactive example: CRUD Rest API</description>
+	<description>Rest API</description>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 	</properties>
 <profiles>
     <profile>
@@ -53,6 +53,36 @@
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.4.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.2</version>
 		</dependency>
 	</dependencies>
 
