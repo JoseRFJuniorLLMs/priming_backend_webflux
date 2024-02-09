@@ -1,5 +1,6 @@
 package com.priming.reactive.service.infra;
 
+import com.priming.reactive.model.infra.AlunoCollection;
 import com.priming.reactive.model.infra.CourseCollection;
 import com.priming.reactive.repository.infra.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +11,16 @@ import reactor.core.publisher.Mono;
 @Service
 public class CourseService {
 
-    @Autowired
+   @Autowired
     private CourseRepository courseRepository;
 
     public Flux<CourseCollection> findAll() {
         return courseRepository.findAll();
     }
 
+    public Flux<CourseCollection> findByCurso(String curso) {
+        return courseRepository.findByName(curso);
+    }
     public Mono<CourseCollection> findById(String id) {
         return courseRepository.findById(id);
     }

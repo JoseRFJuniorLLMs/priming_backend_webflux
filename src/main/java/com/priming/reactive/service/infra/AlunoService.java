@@ -20,6 +20,4 @@ public class AlunoService {
         return alunoRepository.findByCurso(curso);
     }
 
-    // Se necessário, adicione métodos adicionais conforme a lógica do seu serviço
-
 }

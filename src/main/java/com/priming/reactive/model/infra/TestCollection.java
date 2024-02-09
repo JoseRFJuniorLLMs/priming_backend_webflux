@@ -18,5 +18,5 @@ public class TestCollection {
 
     private List<PrimeTargetYoutubeCollection> youtubeCollections;
 
-    // Construtores, getters e setters
+    private List<LessonCollection> lessonCollections;
 }

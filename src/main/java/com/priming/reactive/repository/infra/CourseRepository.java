@@ -1,5 +1,6 @@
 package com.priming.reactive.repository.infra;
 
+import com.priming.reactive.model.infra.AlunoCollection;
 import com.priming.reactive.model.infra.CourseCollection;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
@@ -12,13 +13,5 @@ public interface CourseRepository extends ReactiveMongoRepository<CourseCollecti
 
     Flux<CourseCollection> findByName(String name);
 
-    // Adicione os métodos para as outras consultas aqui
-    Flux<CourseCollection> findByDuration(int duration);
-
-    Flux<CourseCollection> findByLevel(String level);
-
-    Flux<CourseCollection> findByPriceLessThan(double price);
-
-    Flux<CourseCollection> findByRatingGreaterThanEqual(double rating);
 
 }
