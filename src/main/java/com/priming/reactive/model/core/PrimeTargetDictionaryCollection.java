@@ -25,6 +25,9 @@ public class PrimeTargetDictionaryCollection {
         this.text = text;
     }
 
+    public PrimeTargetDictionaryCollection() {
+    }
+
     public String getId() {
         return id;
     }

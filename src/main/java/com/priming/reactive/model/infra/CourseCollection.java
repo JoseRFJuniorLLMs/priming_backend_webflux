@@ -37,6 +37,10 @@ public class CourseCollection {
         this.status = status;
     }
 
+    public CourseCollection() {
+
+    }
+
     public String get_id() {
         return _id;
     }
@@ -74,6 +78,9 @@ public class CourseCollection {
     }
 
     public void setLessons(List<String> lessons) {
+        if (lessons == null) {
+            throw new IllegalArgumentException("Lessons cannot be null.");
+        }
         this.lessons = lessons;
     }
 
@@ -82,6 +89,9 @@ public class CourseCollection {
     }
 
     public void setCategory(String category) {
+        if (category == null) {
+            throw new IllegalArgumentException("Category cannot be null.");
+        }
         this.category = category;
     }
 
@@ -121,4 +131,5 @@ public class CourseCollection {
     public int hashCode() {
         return Objects.hash(_id, name, objective, content, lessons, category, level, price, status);
     }
+
 }

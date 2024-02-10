@@ -23,6 +23,9 @@ public class PrimeTargetTextCollection {
         this.text = text;
     }
 
+    public PrimeTargetTextCollection() {
+    }
+
     public String getId() {
         return id;
     }

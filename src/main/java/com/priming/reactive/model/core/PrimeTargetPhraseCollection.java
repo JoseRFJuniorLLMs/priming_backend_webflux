@@ -22,6 +22,18 @@ public class PrimeTargetPhraseCollection {
 
     private List<String> imagem;
 
+    public PrimeTargetPhraseCollection(String id, String prime, String target, List<String> phrase, List<String> url, List<String> imagem) {
+        this.id = id;
+        this.prime = prime;
+        this.target = target;
+        this.phrase = phrase;
+        this.url = url;
+        this.imagem = imagem;
+    }
+
+    public PrimeTargetPhraseCollection() {
+    }
+
     public String getId() {
         return id;
     }
@@ -81,15 +93,5 @@ public class PrimeTargetPhraseCollection {
     @Override
     public int hashCode() {
         return Objects.hash(id, prime, target, phrase, url, imagem);
-    }
-
-    public PrimeTargetPhraseCollection(String id, String prime, String target, List<String> phrase, List<String> url, List<String> imagem) {
-        this.id = id;
-        this.prime = prime;
-        this.target = target;
-        this.phrase = phrase;
-        this.url = url;
-        this.imagem = imagem;
-
     }
 }

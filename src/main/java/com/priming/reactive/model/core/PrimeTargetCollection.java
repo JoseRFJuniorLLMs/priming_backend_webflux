@@ -20,6 +20,9 @@ public class PrimeTargetCollection {
         this.target = target;
     }
 
+    public PrimeTargetCollection() {
+    }
+
     public String getId() {
         return id;
     }

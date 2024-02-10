@@ -25,6 +25,9 @@ public class PrimeTargetYoutubeCollection {
         this.url = url;
     }
 
+    public PrimeTargetYoutubeCollection() {
+    }
+
     public String getId() {
         return id;
     }
