@@ -9,7 +9,7 @@ public class LessonMapper {
 
     public LessonDTO toDTO(LessonCollection lessonCollection) {
         return new LessonDTO(
-                lessonCollection.getId(),
+                lessonCollection.get_id(),
                 lessonCollection.getName(),
                 lessonCollection.getYoutubeUrl()
         );

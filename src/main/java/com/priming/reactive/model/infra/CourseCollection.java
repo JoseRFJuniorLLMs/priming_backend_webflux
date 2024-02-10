@@ -131,5 +131,4 @@ public class CourseCollection {
     public int hashCode() {
         return Objects.hash(_id, name, objective, content, lessons, category, level, price, status);
     }
-
 }

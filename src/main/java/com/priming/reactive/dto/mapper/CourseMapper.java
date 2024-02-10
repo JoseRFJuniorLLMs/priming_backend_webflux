@@ -2,11 +2,11 @@ package com.priming.reactive.dto.mapper;
 
 import com.priming.reactive.dto.CourseDTO;
 import com.priming.reactive.dto.CourseRequestDTO;
-import com.priming.reactive.dto.LessonDTO;
+import com.priming.reactive.enums.Status;
 import com.priming.reactive.model.infra.CourseCollection;
 import org.springframework.stereotype.Component;
 
-import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 @Component
 public class CourseMapper {
@@ -15,35 +15,28 @@ public class CourseMapper {
         CourseCollection courseCollection = new CourseCollection();
         courseCollection.setName(courseRequestDTO.name());
         courseCollection.setCategory(courseRequestDTO.category());
-        courseCollection.setLessons(courseRequestDTO.lessons().stream()
-                .map(LessonDTO::name)
-                .collect(Collectors.toList()));
+        courseCollection.setLessons(new ArrayList<>(courseRequestDTO.lessons()));
         return courseCollection;
     }
 
     public CourseDTO toDTO(CourseCollection courseCollection) {
         return new CourseDTO(
-                courseCollection.getId(),
+                courseCollection.get_id(),
                 courseCollection.getName(),
                 courseCollection.getCategory(),
                 courseCollection.getLessons()
         );
     }
 
-    public Course toModel(CourseCollection courseCollection) {
-        Course course = new Course();
-        course.setName(courseCollection.getName());
-        course.setCategory(courseCollection.getCategory());
-        // Set other properties as needed
-        return course;
+    public Status convertStatusValue(String value) {
+        if (value == null) {
+            return null;
+        }
+        return switch (value) {
+            case "ACTIVE" -> Status.ACTIVE;
+            case "INACTIVE" -> Status.INACTIVE;
+            default -> throw new IllegalArgumentException("Invalid Status value: " + value);
+        };
     }
 
-    public CourseCollection toCollection(Course course) {
-        CourseCollection courseCollection = new CourseCollection();
-        courseCollection.setId(course.getId());
-        courseCollection.setName(course.getName());
-        courseCollection.setCategory(course.getCategory());
-        // Set other properties as needed
-        return courseCollection;
-    }
 }
