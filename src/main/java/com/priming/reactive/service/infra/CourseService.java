@@ -17,8 +17,8 @@ public class CourseService {
         return courseRepository.findAll();
     }
 
-    public Flux<CourseCollection> findByCurso(String curso) {
-        return courseRepository.findByName(curso);
+    public Flux<CourseCollection> findByCurso(String course) {
+        return courseRepository.findByName(course);
     }
     public Mono<CourseCollection> findById(String id) {
         return courseRepository.findById(id);

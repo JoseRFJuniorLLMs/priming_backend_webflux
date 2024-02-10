@@ -1,14 +1,14 @@
 package com.priming.reactive.controller.infra;
 
 import com.priming.reactive.model.core.PrimeTargetCollection;
-import com.priming.reactive.model.infra.StudantCollection;
+import com.priming.reactive.model.infra.StudentCollection;
 import com.priming.reactive.model.core.PrimeTargetPhraseCollection;
 import com.priming.reactive.model.core.PrimeTargetTextCollection;
 import com.priming.reactive.model.core.PrimeTargetYoutubeCollection;
 
 
 import com.priming.reactive.service.core.PrimeTargetService;
-import com.priming.reactive.service.infra.StudantService;
+import com.priming.reactive.service.infra.StudentService;
 import com.priming.reactive.service.core.PrimeTargetPhraseService;
 import com.priming.reactive.service.core.PrimeTargetTextService;
 import com.priming.reactive.service.core.PrimeTargetYoutubeService;
@@ -22,12 +22,12 @@ import reactor.core.publisher.Mono;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
-public class StudantController {
+public class StudentController {
 
     @Autowired
     private PrimeTargetService primeTargetService;
     @Autowired
-    private StudantService studantService;
+    private StudentService studentService;
 
     @Autowired
     private PrimeTargetPhraseService primeTargetPhraseService;
@@ -38,18 +38,18 @@ public class StudantController {
     @Autowired
     private PrimeTargetYoutubeService primeTargetYoutubeService;
 
-    @GetMapping("/studant")
+    @GetMapping("/student")
     @ResponseStatus(HttpStatus.OK)
-    public Flux<StudantCollection> getAllStudants(@RequestParam(required = false) String course) {
+    public Flux<StudentCollection> getAllStudents(@RequestParam(required = false) String course) {
         if (course == null) {
-            return studantService.findAll();
+            return studentService.findAll();
         } else {
-            return studantService.findByCourse(course);
+            return studentService.findByCourse(course);
         }
     }
 
-    @GetMapping("/aluno/info/{target}")
-    public Mono<AlunoTargetInfo> getAlunoTargetInfo(@PathVariable String target) {
+    @GetMapping("/student/info/{target}")
+    public Mono<AlunoTargetInfo> getStudantTargetInfo(@PathVariable String target) {
         Mono<PrimeTargetCollection> primingInfo = primeTargetService.findSingleTargetByPrime(target);
         Mono<PrimeTargetPhraseCollection> fraseInfo = primeTargetPhraseService.findTargetAndPhraseByPrime(target);
         Mono<PrimeTargetTextCollection> textInfo = primeTargetTextService.findTargetAndTextByPrime(target);

@@ -13,8 +13,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 import java.util.Objects;
 
-@Document(collection = "StudantCollection")
-public class StudantCollection {
+@Document(collection = "StudentCollection")
+public class StudentCollection {
     @Id
     private String id;
     @NotNull
@@ -36,7 +36,7 @@ public class StudantCollection {
     private List<String> course;
     private List<String> prime;
 
-    public StudantCollection(String id, String name, String email, String tax_identification_number, String personal_identification_number, String login, String password, Status status, List<String> course, List<String> prime) {
+    public StudentCollection(String id, String name, String email, String tax_identification_number, String personal_identification_number, String login, String password, Status status, List<String> course, List<String> prime) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -133,7 +133,7 @@ public class StudantCollection {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        StudantCollection that = (StudantCollection) o;
+        StudentCollection that = (StudentCollection) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(email, that.email) && Objects.equals(tax_identification_number, that.tax_identification_number) && Objects.equals(personal_identification_number, that.personal_identification_number) && Objects.equals(login, that.login) && Objects.equals(password, that.password) && status == that.status && Objects.equals(course, that.course) && Objects.equals(prime, that.prime);
     }
 
