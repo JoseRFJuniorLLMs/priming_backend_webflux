@@ -1,5 +1,9 @@
 package com.priming.reactive.model.infra;
 
+import com.priming.reactive.enums.Status;
+import com.priming.reactive.enums.converters.StatusConverter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -17,8 +21,11 @@ public class CourseCollection {
     private String category;
     private String level;
     private String price;
+    @Column(length = 8, nullable = false)
+    @Convert(converter = StatusConverter.class)
+    private Status status = Status.ACTIVE;
 
-    public CourseCollection(String _id, String name, String objective, List<String> content, List<String> lessons, String category, String level, String price) {
+    public CourseCollection(String _id, String name, String objective, List<String> content, List<String> lessons, String category, String level, String price, Status status) {
         this._id = _id;
         this.name = name;
         this.objective = objective;
@@ -27,6 +34,7 @@ public class CourseCollection {
         this.category = category;
         this.level = level;
         this.price = price;
+        this.status = status;
     }
 
     public String get_id() {
@@ -93,16 +101,24 @@ public class CourseCollection {
         this.price = price;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CourseCollection that = (CourseCollection) o;
-        return Objects.equals(_id, that._id) && Objects.equals(name, that.name) && Objects.equals(objective, that.objective) && Objects.equals(content, that.content) && Objects.equals(lessons, that.lessons) && Objects.equals(category, that.category) && Objects.equals(level, that.level) && Objects.equals(price, that.price);
+        return Objects.equals(_id, that._id) && Objects.equals(name, that.name) && Objects.equals(objective, that.objective) && Objects.equals(content, that.content) && Objects.equals(lessons, that.lessons) && Objects.equals(category, that.category) && Objects.equals(level, that.level) && Objects.equals(price, that.price) && status == that.status;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(_id, name, objective, content, lessons, category, level, price);
+        return Objects.hash(_id, name, objective, content, lessons, category, level, price, status);
     }
 }

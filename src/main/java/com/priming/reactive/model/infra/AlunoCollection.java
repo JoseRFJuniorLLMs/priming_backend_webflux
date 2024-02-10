@@ -18,7 +18,9 @@ public class AlunoCollection {
     @Id
     private String id;
     @NotNull
-    private String nome;
+    private String name;
+    @NotNull
+    private String email;
     @NotNull
     private String tax_identification_number;
     @NotNull
@@ -31,18 +33,19 @@ public class AlunoCollection {
     @Column(length = 8, nullable = false)
     @Convert(converter = StatusConverter.class)
     private Status status = Status.ACTIVE;
-    private List<String> curso;
+    private List<String> course;
     private List<String> prime;
 
-    public AlunoCollection(String id, String nome, String tax_identification_number, String personal_identification_number, String login, String password, Status status, List<String> curso, List<String> prime) {
+    public AlunoCollection(String id, String name, String email, String tax_identification_number, String personal_identification_number, String login, String password, Status status, List<String> course, List<String> prime) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
+        this.email = email;
         this.tax_identification_number = tax_identification_number;
         this.personal_identification_number = personal_identification_number;
         this.login = login;
         this.password = password;
         this.status = status;
-        this.curso = curso;
+        this.course = course;
         this.prime = prime;
     }
 
@@ -54,12 +57,20 @@ public class AlunoCollection {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTax_identification_number() {
@@ -102,12 +113,12 @@ public class AlunoCollection {
         this.status = status;
     }
 
-    public List<String> getCurso() {
-        return curso;
+    public List<String> getCourse() {
+        return course;
     }
 
-    public void setCurso(List<String> curso) {
-        this.curso = curso;
+    public void setCourse(List<String> course) {
+        this.course = course;
     }
 
     public List<String> getPrime() {
@@ -123,12 +134,12 @@ public class AlunoCollection {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AlunoCollection that = (AlunoCollection) o;
-        return Objects.equals(id, that.id) && Objects.equals(nome, that.nome) && Objects.equals(tax_identification_number, that.tax_identification_number) && Objects.equals(personal_identification_number, that.personal_identification_number) && Objects.equals(login, that.login) && Objects.equals(password, that.password) && status == that.status && Objects.equals(curso, that.curso) && Objects.equals(prime, that.prime);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(email, that.email) && Objects.equals(tax_identification_number, that.tax_identification_number) && Objects.equals(personal_identification_number, that.personal_identification_number) && Objects.equals(login, that.login) && Objects.equals(password, that.password) && status == that.status && Objects.equals(course, that.course) && Objects.equals(prime, that.prime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, tax_identification_number, personal_identification_number, login, password, status, curso, prime);
+        return Objects.hash(id, name, email, tax_identification_number, personal_identification_number, login, password, status, course, prime);
     }
 }
 
