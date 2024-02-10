@@ -1,0 +1,362 @@
+primeDB.ClassroomCollection
+_id
+65c346b9c2c6b863b23d82d3
+studentId
+"65befce78e1080e0c7308781"
+course
+"English"
+module
+"Introduction"
+prime
+"CHEAT"
+target
+"FAIL"
+
+phrases
+Array (10)
+0
+"My diet CHEATS are always FAILures."
+1
+"I CHEATed on my diet and ate a whole cake, what a FAIL."
+2
+"I tried CHEATing on a test but got caught and FAILed."
+3
+"I CHEATed on my taxes and FAILed to pay what I owed."
+4
+"I tried to CHEAT on my partner but got caught and it was a FAIL."
+5
+"I CHEATed at a game of cards but got caught and had to forfeit the …"
+6
+"I CHEATed on my homework and got caught, what a FAIL."
+7
+"I CHEATed on my spouse and it was a huge FAIL."
+8
+"I CHEATed on my job application and got caught, FAIL."
+9
+"I CHEATed on my doctor and got caught, FAIL."
+
+audioUrls
+Array (10)
+0
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_1.wav"
+1
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_2.wav"
+2
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_3.wav"
+3
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_4.wav"
+4
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_5.wav"
+5
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_6.wav"
+6
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_7.wav"
+7
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_8.wav"
+8
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_9.wav"
+9
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_10.wav"
+
+imageUrls
+Array (10)
+0
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+1
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+2
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+3
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+4
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+5
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+6
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+7
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+8
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+9
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+
+videoUrls
+Array (10)
+0
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+1
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+2
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+3
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+4
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+5
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+6
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+7
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+8
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+9
+"https://www.youtube.com/watch?v=DwckUSF67TY"
+text
+"In a world where travel adventures take unexpected turns, a couple emb…"
+
+
+primeDB.CourseCollection
+id
+65c5d833c2c6b863b26ae1df
+name
+"Basic English"
+objective
+"Introduction to the English language for beginners."
+
+content
+Array (3)
+0
+"Greetings and introductions."
+1
+"Numbers, dates, and times."
+2
+"Essential vocabulary for everyday situations."
+
+lessons
+Array (10)
+0
+"Basic 1"
+1
+"Basic 2"
+2
+"Basic 3"
+3
+"Basic 4"
+4
+"Basic 5"
+5
+"Basic 6"
+6
+"Basic 7"
+7
+"Basic 8"
+8
+"Basic 9"
+9
+"Basic 10"
+category
+"Language"
+level
+"A1"
+price
+"5.000"
+status
+"ACTIVE"
+
+primeDB.StudentCollection
+
+_id
+"65c6b4a3c2c6b863b27a27ca"
+name
+"Fred"
+tax_identification_number
+"123456789"
+personal_identification_number
+"987654321"
+login
+"fred"
+password
+"senha123"
+status
+"ACTIVE"
+
+course
+Array (4)
+0
+"Basic English"
+1
+"English for Travel"
+2
+"Informal English and Slang"
+3
+"English for Interviews"
+
+prime
+Array (10)
+0
+"CHEAT;FAIL"
+1
+"PICTURE;FRAME"
+2
+"DINER;SUPPER"
+3
+"BREEZEWAY;WALKWAY"
+4
+"MORAL;VALUES"
+5
+"REEF;CORAL"
+6
+"COMPONENTS;PARTS"
+7
+"SNEAK;PREVIEW"
+8
+"PRICELESS;VALUABLE"
+9
+"MEAT;STEAK"
+email
+"fred@gmail.com"
+
+primeDB.primeCollection
+
+_id
+65ba9e2ba8599f90832ed77e
+prime
+"CHEAT"
+target
+"FAIL"
+
+primeDB.primeTargetDictionaryCollection
+
+_id
+65bcd82a598e9d06d7c22c72
+prime
+"CHEAT"
+target
+"FAIL"
+text
+" **CHEAT**
+
+**Definition Dictionary**
+: deceive or trick (someone), es…"
+
+primeDB.primeTargetPhraseCollection
+
+_id
+65bcc615b899d42dd1f2dbd4
+prime
+"CHEAT"
+target
+"FAIL"
+
+url
+Array (10)
+0
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_1.wav"
+1
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_2.wav"
+2
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_3.wav"
+3
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_4.wav"
+4
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_5.wav"
+5
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_6.wav"
+6
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_7.wav"
+7
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_8.wav"
+8
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_9.wav"
+9
+"https://storage.googleapis.com/priming_frase_wav/CHEAT_10.wav"
+
+imagem
+Array (10)
+0
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+1
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+2
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+3
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+4
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+5
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+6
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+7
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+8
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+9
+"https://cdn.wizard.com.br/wp-content/uploads/2020/06/03192344/palavras…"
+
+phrase
+Array (10)
+0
+"1. My diet CHEATS are always FAILures."
+1
+"2. I CHEATed on my diet and ate a whole cake, what a FAIL."
+2
+"3. I tried CHEATing on a test but got caught and FAILed."
+3
+"4. I CHEATed on my taxes and FAILed to pay what I owed."
+4
+"5. I tried to CHEAT on my partner but got caught and it was a FAIL."
+5
+"6. I CHEATed at a game of cards but got caught and had to forfeit the …"
+6
+"7. I CHEATed on my homework and got caught, what a FAIL."
+7
+"8. I CHEATed on my spouse and it was a huge FAIL."
+8
+"9. I CHEATed on my job application and got caught, FAIL."
+9
+"10. I CHEATed on my doctor and got caught, FAIL."
+
+primeDB.primeTargetTextCollection
+
+_id
+65bcc36aaffad5f039fa3ccd
+prime
+"CHEAT"
+target
+"FAIL"
+text
+" In a world where travel adventures take unexpected turns, a couple em…"
+
+
+_id
+65bcc36aaffad5f039fa3ccd
+prime
+"CHEAT"
+target
+"FAIL"
+text
+" In a world where travel adventures take unexpected turns, a couple em…"
+
+primeDB.primeTargetYoutubeCollection
+_id
+65bcd5da6e54fa168ad2fe37
+prime
+"CHEAT"
+target
+"FAIL"
+
+url
+Array (10)
+0
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+1
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+2
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+3
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+4
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+5
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+6
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+7
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+8
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
+9
+"https://www.youtube.com/watch?v=S7isDUpXAG8"
