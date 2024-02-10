@@ -1,14 +1,14 @@
 package com.priming.reactive.repository.infra;
 
-import com.priming.reactive.model.infra.AlunoCollection;
+import com.priming.reactive.model.infra.StudantCollection;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
 
 @Repository
-public interface AlunoRepository extends ReactiveMongoRepository<AlunoCollection, String> {
+public interface StudantRepository extends ReactiveMongoRepository<StudantCollection, String> {
 
-    Flux<AlunoCollection> findByCurso(String curso);
+    Flux<StudantCollection> findByCourse(String course);
 
 
 }

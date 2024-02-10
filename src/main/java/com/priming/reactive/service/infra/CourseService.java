@@ -1,6 +1,5 @@
 package com.priming.reactive.service.infra;
 
-import com.priming.reactive.model.infra.AlunoCollection;
 import com.priming.reactive.model.infra.CourseCollection;
 import com.priming.reactive.repository.infra.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;

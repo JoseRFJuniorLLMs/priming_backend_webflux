@@ -1,14 +1,14 @@
 package com.priming.reactive.controller.infra;
 
 import com.priming.reactive.model.core.PrimeTargetCollection;
-import com.priming.reactive.model.infra.AlunoCollection;
+import com.priming.reactive.model.infra.StudantCollection;
 import com.priming.reactive.model.core.PrimeTargetPhraseCollection;
 import com.priming.reactive.model.core.PrimeTargetTextCollection;
 import com.priming.reactive.model.core.PrimeTargetYoutubeCollection;
 
 
 import com.priming.reactive.service.core.PrimeTargetService;
-import com.priming.reactive.service.infra.AlunoService;
+import com.priming.reactive.service.infra.StudantService;
 import com.priming.reactive.service.core.PrimeTargetPhraseService;
 import com.priming.reactive.service.core.PrimeTargetTextService;
 import com.priming.reactive.service.core.PrimeTargetYoutubeService;
@@ -22,12 +22,12 @@ import reactor.core.publisher.Mono;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
-public class AlunoController {
+public class StudantController {
 
     @Autowired
     private PrimeTargetService primeTargetService;
     @Autowired
-    private AlunoService alunoService;
+    private StudantService studantService;
 
     @Autowired
     private PrimeTargetPhraseService primeTargetPhraseService;
@@ -38,13 +38,13 @@ public class AlunoController {
     @Autowired
     private PrimeTargetYoutubeService primeTargetYoutubeService;
 
-    @GetMapping("/aluno")
+    @GetMapping("/studant")
     @ResponseStatus(HttpStatus.OK)
-    public Flux<AlunoCollection> getAllAlunos(@RequestParam(required = false) String curso) {
-        if (curso == null) {
-            return alunoService.findAll();
+    public Flux<StudantCollection> getAllStudants(@RequestParam(required = false) String course) {
+        if (course == null) {
+            return studantService.findAll();
         } else {
-            return alunoService.findByCurso(curso);
+            return studantService.findByCourse(course);
         }
     }
 
