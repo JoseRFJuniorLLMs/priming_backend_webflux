@@ -10,20 +10,15 @@ import java.util.Objects;
 public class CourseCollection {
     @Id
     private String _id;
-
     private String name;
-
     private String objective;
-
     private List<String> content;
-
     private List<String> lessons;
-
     private String category;
-
     private String level;
+    private String price;
 
-    public CourseCollection(String _id, String name, String objective, List<String> content, List<String> lessons, String category, String level) {
+    public CourseCollection(String _id, String name, String objective, List<String> content, List<String> lessons, String category, String level, String price) {
         this._id = _id;
         this.name = name;
         this.objective = objective;
@@ -31,6 +26,7 @@ public class CourseCollection {
         this.lessons = lessons;
         this.category = category;
         this.level = level;
+        this.price = price;
     }
 
     public String get_id() {
@@ -89,16 +85,24 @@ public class CourseCollection {
         this.level = level;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CourseCollection that = (CourseCollection) o;
-        return Objects.equals(_id, that._id) && Objects.equals(name, that.name) && Objects.equals(objective, that.objective) && Objects.equals(content, that.content) && Objects.equals(lessons, that.lessons) && Objects.equals(category, that.category) && Objects.equals(level, that.level);
+        return Objects.equals(_id, that._id) && Objects.equals(name, that.name) && Objects.equals(objective, that.objective) && Objects.equals(content, that.content) && Objects.equals(lessons, that.lessons) && Objects.equals(category, that.category) && Objects.equals(level, that.level) && Objects.equals(price, that.price);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(_id, name, objective, content, lessons, category, level);
+        return Objects.hash(_id, name, objective, content, lessons, category, level, price);
     }
 }
