@@ -5,8 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Objects;
 
-@Document(collection = "ModuloCollection")
-public class ModuloCollection {
+@Document(collection = "ModuleCollection")
+public class ModuleCollection {
 
     @Id
     private String id;
@@ -17,7 +17,7 @@ public class ModuloCollection {
 
     private String text;
 
-    public ModuloCollection(String id, String prime, String target, String text) {
+    public ModuleCollection(String id, String prime, String target, String text) {
         this.id = id;
         this.prime = prime;
         this.target = target;
@@ -60,7 +60,7 @@ public class ModuloCollection {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ModuloCollection that = (ModuloCollection) o;
+        ModuleCollection that = (ModuleCollection) o;
         return Objects.equals(id, that.id) && Objects.equals(prime, that.prime) && Objects.equals(target, that.target) && Objects.equals(text, that.text);
     }
 
