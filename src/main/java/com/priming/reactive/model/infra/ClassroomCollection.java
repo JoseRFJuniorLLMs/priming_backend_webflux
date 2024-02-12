@@ -7,7 +7,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 import java.util.Objects;
 
-public class ClassroomCollection {
+public class  ClassroomCollection {
 
     @Id
     private String id;
